@@ -4,7 +4,8 @@ The NOF Racing website. Plain HTML and CSS, hosted free on GitHub Pages.
 
 ## Files
 
-- `index.html`: the page
+- `index.html`: the English page
+- `sv/index.html`: the Swedish page
 - `style.css`: all styling
 - `assets/`: logo and icons
 - `CNAME`: tells GitHub Pages to serve the site on nofracing.se
@@ -12,11 +13,11 @@ The NOF Racing website. Plain HTML and CSS, hosted free on GitHub Pages.
 
 ## Put it online
 
-1. Create a new **public** repository on github.com, for example `nofracing-site`.
+1. Create a new **public** repository on github.com, for example `nofracing`.
 2. Push this folder to it:
 
    ```
-   git remote add origin https://github.com/YOUR-USERNAME/nofracing-site.git
+   git remote add origin https://github.com/LinusWillmont/nofracing.git
    git push -u origin main
    ```
 
@@ -39,7 +40,7 @@ Remove any existing A, AAAA or CNAME records for `@` and `www` first. Leave MX a
 | AAAA  | @    | 2606:50c0:8001::153    |
 | AAAA  | @    | 2606:50c0:8002::153    |
 | AAAA  | @    | 2606:50c0:8003::153    |
-| CNAME | www  | YOUR-USERNAME.github.io |
+| CNAME | www  | linuswillmont.github.io |
 
 DNS can take up to a few hours. When GitHub shows the domain as verified, tick **Enforce HTTPS** in Settings > Pages.
 
