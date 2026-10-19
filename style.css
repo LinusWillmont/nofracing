@@ -105,9 +105,8 @@ h2 { font-size: clamp(28px, 4vw, 42px); }
 h3 { font-size: 18px; }
 .intro { color: var(--muted); max-width: 42em; margin: 14px 0 36px; }
 
-.car-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .specs {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
 }
 
 /* PHOTOS */
@@ -161,9 +160,7 @@ h3 { font-size: 18px; }
   .lead { margin-left: auto; margin-right: auto; }
   .cta { justify-content: center; }
   .hero-stripes { opacity: .35; }
-  .car-grid { grid-template-columns: 1fr; gap: 36px; }
-  .car-grid .photo { max-width: 520px; }
-  .perks { grid-template-columns: 1fr 1fr; }
+  .specs, .perks { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
