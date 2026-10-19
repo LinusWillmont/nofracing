@@ -1,0 +1,172 @@
+:root {
+  --bg: #0b0b0b;
+  --bg-alt: #141414;
+  --card: #1b1b1b;
+  --line: #2a2a2a;
+  --ink: #f2f2f2;
+  --muted: #a3a3a3;
+  --red: #d7141a;
+  --red-hot: #ff2a2a;
+  --head: "Orbitron", Impact, "Arial Black", sans-serif;
+  --body: "Inter", system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 14px 20px;
+  background: rgba(11, 11, 11, .88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  font-family: var(--head); font-weight: 900; font-size: 20px; letter-spacing: 2px;
+  text-decoration: none; font-style: italic;
+}
+.brand span { color: var(--red); }
+.nav nav { display: flex; gap: 22px; }
+.nav nav a {
+  text-decoration: none; color: var(--muted); font-weight: 600; font-size: 15px;
+  transition: color .15s;
+}
+.nav nav a:hover { color: var(--ink); }
+
+/* HERO */
+.hero {
+  position: relative; overflow: hidden;
+  padding: 72px 0 80px;
+  background: radial-gradient(ellipse at 70% 40%, #222 0%, var(--bg) 65%);
+}
+.hero-stripes { position: absolute; inset: 0; pointer-events: none; }
+.hero-stripes i {
+  position: absolute; top: -10%; bottom: -10%;
+  background: var(--red); transform: skewX(-20deg); opacity: .9;
+}
+.hero-stripes i:nth-child(1) { left: 3%;  width: 46px; }
+.hero-stripes i:nth-child(2) { left: calc(3% + 62px); width: 20px; }
+.hero-stripes i:nth-child(3) { left: calc(3% + 96px); width: 9px; }
+
+.hero-grid {
+  position: relative;
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center;
+  padding-left: 170px;
+}
+.kicker {
+  margin: 0 0 8px;
+  font-family: var(--head); font-weight: 700; font-size: 13px;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--red-hot);
+}
+h1, h2, h3 { font-family: var(--head); font-weight: 900; line-height: 1.1; margin: 0; }
+h1 {
+  font-size: clamp(44px, 7vw, 84px); font-style: italic; letter-spacing: 1px;
+}
+h1 span { color: var(--red); }
+.lead { color: #cfcfcf; font-size: 19px; max-width: 34em; margin: 18px 0 28px; }
+.hero-logo svg { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 auto;
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,.6)); }
+
+/* BUTTONS */
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-block; padding: 13px 26px;
+  font-family: var(--head); font-weight: 700; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+  text-decoration: none; border: 2px solid var(--ink);
+  transform: skewX(-10deg); transition: background .15s, border-color .15s, color .15s;
+}
+.btn.primary { background: var(--red); border-color: var(--red); }
+.btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+/* CHECKER DIVIDER */
+.checker {
+  height: 24px;
+  background:
+    conic-gradient(#eee 25%, #111 0 50%, #eee 0 75%, #111 0) 0 0 / 24px 24px;
+}
+
+/* SECTIONS */
+.section { padding: 80px 0; }
+.section.alt { background: var(--bg-alt); }
+h2 { font-size: clamp(28px, 4vw, 42px); }
+h3 { font-size: 18px; }
+.intro { color: var(--muted); max-width: 42em; margin: 14px 0 36px; }
+
+.specs {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.spec {
+  background: var(--card); border-left: 4px solid var(--red);
+  padding: 18px 20px;
+}
+.spec span { display: block; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 2px; }
+.spec strong { display: block; font-size: 18px; margin-top: 4px; }
+
+.next { margin-top: 40px; }
+.next ul { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
+.next li { position: relative; padding-left: 30px; color: #d6d6d6; }
+.next li::before {
+  content: ""; position: absolute; left: 0; top: .55em;
+  width: 16px; height: 8px; background: var(--red); transform: skewX(-20deg);
+}
+
+.perks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 36px; }
+.perk { background: var(--card); padding: 24px; border-top: 4px solid var(--red); }
+.perk b { font-family: var(--head); color: var(--red); font-size: 14px; letter-spacing: 2px; }
+.perk h3 { margin: 8px 0 8px; }
+.perk p { margin: 0; color: var(--muted); }
+
+.contact { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+.contact .intro { margin-bottom: 0; }
+.mail {
+  font-family: var(--head); font-weight: 900; font-size: clamp(20px, 3.2vw, 32px);
+  text-decoration: none; border-bottom: 4px solid var(--red); padding-bottom: 4px;
+  overflow-wrap: anywhere;
+}
+.mail:hover { color: var(--red-hot); }
+
+/* FOOTER */
+.footer { background: #050505; }
+.foot {
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  padding-top: 26px; padding-bottom: 30px; color: var(--muted); font-size: 14px;
+}
+.tag { font-family: var(--head); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--ink); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; padding-left: 0; text-align: center; }
+  .hero-logo { order: -1; }
+  .hero-logo svg { max-width: 300px; }
+  .lead { margin-left: auto; margin-right: auto; }
+  .cta { justify-content: center; }
+  .hero-stripes { opacity: .35; }
+  .specs, .perks { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .nav { padding: 12px 16px; }
+  .nav nav { gap: 14px; }
+  .nav nav a { font-size: 13px; }
+  .brand { font-size: 16px; }
+  .wrap { padding: 0 16px; }
+  .hero { padding: 44px 0 56px; }
+  .section { padding: 56px 0; }
+  .specs, .perks { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
