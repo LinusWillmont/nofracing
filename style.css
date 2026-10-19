@@ -1,3 +1,13 @@
+/* FONTS (self-hosted, SIL Open Font License, see fonts/OFL-*.txt) */
+@font-face {
+  font-family: "Orbitron"; font-style: normal; font-weight: 400 900; font-display: swap;
+  src: url("fonts/orbitron-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url("fonts/inter-latin.woff2") format("woff2");
+}
+
 :root {
   --bg: #0b0b0b;
   --bg-alt: #141414;
