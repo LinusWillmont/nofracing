@@ -4,8 +4,9 @@ The NOF Racing website. Plain HTML and CSS, hosted free on GitHub Pages.
 
 ## Files
 
-- `index.html`: the English page
-- `sv/index.html`: the Swedish page
+- `index.html`: the Swedish page (default)
+- `en/index.html`: the English page
+- `sv/index.html`: redirects old /sv/ links to the front page
 - `style.css`: all styling
 - `assets/`: logo and icons
 - `CNAME`: tells GitHub Pages to serve the site on nofracing.se
